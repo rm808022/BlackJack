@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".MainActivity"
     android:background="@drawable/background3">
 
@@ -14,6 +15,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="0"
             android:paddingRight="5dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
@@ -39,15 +41,16 @@
 
                     <ImageView
                         android:id="@+id/imgVStore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/store"/>
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/store"
+                        android:layout_gravity="center"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Store"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -56,15 +59,15 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_height="wrap_content"
                     >
 
                     <ImageView
                         android:id="@+id/imgVFriends"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_gravity="center"
                         android:src="@drawable/users"/>
                     <TextView
@@ -72,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:text="Friends"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -81,15 +84,15 @@
                     android:orientation="vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     >
 
                     <ImageView
                         android:id="@+id/imgVMessage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_gravity="center"
                         android:src="@drawable/envelope"/>
                     <TextView
@@ -97,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:text="Message"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -110,7 +113,6 @@
                 android:text="Profile"
                 android:textSize="15dp"
                 android:textColor="#ffffff"
-                android:textStyle="bold"
                 android:layout_below="@+id/linearLayout1"/>
 
             <LinearLayout
@@ -125,8 +127,8 @@
                 <ImageView
                     android:id="@+id/imgVUserProfile"
                     android:src="@drawable/userprofile"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     />
                 <LinearLayout
                     android:orientation="vertical"
@@ -139,6 +141,7 @@
                         android:layout_height="wrap_content"
                         android:text="Guest"
                         android:textColor="#ffffff"
+                        android:textStyle="bold"
                         android:textSize="15dp"
                         />
                     <TextView
@@ -169,12 +172,11 @@
                 android:layout_height="wrap_content"
                 android:text="Friends &amp; Players"
                 android:textSize="15dp"
-                android:textStyle="bold"
                 android:textColor="#ffffff"
-
                 android:layout_below="@+id/linearLayout1"/>
 
             <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -184,7 +186,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/linearLayout3"
+
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -197,8 +199,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="36dp"
+                        android:layout_height="36dp" />
 
 
 
@@ -259,51 +261,79 @@
         <LinearLayout
             android:id="@+id/linearLayoutCenter"
             android:layout_toRightOf="@+id/linearLayoutLeft"
-            android:layout_width="220dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/llHeaderCenter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:gravity="center"
+                android:visibility="visible"
                 android:background="@drawable/bg_top">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:src="@drawable/aces" />
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="10dp">
+                    android:orientation="horizontal">
 
-                    <TextView
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BLACKJACKIST"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        android:textColor="#f9fafa"
-                        />
-                    <TextView
+                        android:src="@drawable/aces"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BLACKJACK"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
-                        android:textColor="#f9fafa"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BLACKJACKIST"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#f9fafa"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BLACKJACK"
+                            android:textSize="12dp"
+                            android:textStyle="italic"
+                            android:textColor="#f9fafa"
+                            android:layout_gravity="center"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                       />
+
 
                 </LinearLayout>
 
@@ -311,13 +341,37 @@
 
 
 
-                <ImageView
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/llDialogText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/menu"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"/>
+                    android:background="#034a82"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDialogHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Setting"
+                        android:textSize="25dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"/>
+
+
+                </LinearLayout>
+
 
 
 
@@ -326,11 +380,11 @@
 
 
             <RelativeLayout
+                android:id="@+id/rlBodyCenterBody"
                 android:background="@drawable/bg_center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-
                 android:paddingRight="25dp">
 
                 <TextView
@@ -395,10 +449,11 @@
         <LinearLayout
             android:id="@+id/linearLayoutRight"
             android:orientation="vertical"
+            android:layout_weight="0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/linearLayoutCenter"
-            android:paddingRight="10dp"
+            android:paddingRight="5dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:paddingLeft="5dp">
@@ -408,15 +463,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#9e010b48"
-                android:padding="5dp"
-                android:layout_alignParentRight="true"
-                >
+                android:layout_alignParentRight="true">
 
                 <LinearLayout
                     android:id="@+id/llSupport"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                   >
 
                     <ImageView
                         android:id="@+id/imgVSupport"
@@ -429,7 +485,7 @@
                         android:layout_height="wrap_content"
                         android:text="Support"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -437,8 +493,9 @@
                     android:id="@+id/llSetting"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
                     android:layout_height="wrap_content">
 
                     <ImageView
@@ -452,7 +509,7 @@
                         android:layout_height="wrap_content"
                         android:text="Settings"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -461,6 +518,9 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+
                     >
 
                     <ImageView
@@ -474,7 +534,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sign In"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"/>
+                        android:textSize="10dp"/>
 
                 </LinearLayout>
 
@@ -483,6 +543,7 @@
 
 
                 <TextView
+                    android:id="@+id/tvPlayerOnline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Players online:16,557"
@@ -524,7 +585,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-
+                android:id="@+id/rlBodyLobby"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_marginTop="10dp"
@@ -553,9 +614,11 @@
 
 
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -571,9 +634,9 @@
 
                         <ImageView
                             android:id="@+id/imgVTournament"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                           android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
                             android:src="@drawable/trophy" />
@@ -582,10 +645,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/imgVTournament"
-                            android:layout_centerHorizontal="true"
                             android:text="Tournament"
+                            android:layout_centerHorizontal="true"
                             android:textSize="10dp"
-                            android:layout_marginTop="10dp"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
 
@@ -600,11 +662,10 @@
 
                         <ImageView
                             android:id="@+id/imgVStores"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
                             android:src="@drawable/spades" />
 
                         <TextView
@@ -613,7 +674,6 @@
                             android:layout_below="@+id/imgVStores"
                             android:layout_centerHorizontal="true"
                             android:text="Store"
-                            android:layout_marginTop="10dp"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
@@ -628,9 +688,9 @@
 
                         <ImageView
                             android:id="@+id/imgVFreeChips"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                           android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
                             android:src="@drawable/chips" />
@@ -640,7 +700,6 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/imgVFreeChips"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
                             android:text="Free Chips"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
@@ -656,9 +715,9 @@
 
                         <ImageView
                             android:id="@+id/imgVDailyBonus"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
                             android:src="@drawable/bonus" />
@@ -669,7 +728,6 @@
                             android:layout_below="@+id/imgVDailyBonus"
                             android:layout_centerHorizontal="true"
                             android:text="Daily Bonus"
-                            android:layout_marginTop="10dp"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
@@ -685,11 +743,10 @@
 
                         <ImageView
                             android:id="@+id/imgVLottery"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
                             android:src="@drawable/lottery" />
 
                         <TextView
@@ -697,7 +754,6 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/imgVLottery"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
                             android:text="Lottery"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
@@ -714,11 +770,10 @@
 
                         <ImageView
                             android:id="@+id/imgVSignIn"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
                             android:src="@drawable/sign_in_new" />
 
                         <TextView
@@ -726,7 +781,6 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/imgVSignIn"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
                             android:text="Sign In"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
@@ -741,9 +795,9 @@
 
                         <ImageView
                             android:id="@+id/imgVTutorial"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerVertical="true"
                             android:layout_centerHorizontal="true"
                             android:src="@drawable/tutorial" />
 
@@ -753,7 +807,6 @@
                             android:layout_below="@+id/imgVTutorial"
                             android:layout_centerHorizontal="true"
                             android:text="Tutorail"
-                            android:layout_marginTop="10dp"
                             android:textSize="10dp"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
@@ -774,4 +827,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>

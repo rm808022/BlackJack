@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlBodySignInMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+    android:background="@drawable/bg_sign_in_main">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/rlBodySignIn"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlBodySignInRequest"
+        android:layout_below="@+id/rlBodySignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/bg_main"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="You can sign in using Facebook or Pokerist account and"
+            android:textStyle="normal"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_below="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save all ur data"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"
+            android:textSize="15dp"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_below="@+id/rlBodySignInRequest"
+        android:text="Sign In"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
+    <ImageView
+        android:id="@+id/imgVSignCancel"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/rlBodySignInMain"
+        android:layout_toRightOf="@+id/rlBodySignInMain"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="-20dp"
+        android:src="@drawable/error" />
+</RelativeLayout>

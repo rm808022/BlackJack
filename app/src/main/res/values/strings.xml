@@ -1,4 +1,165 @@
 <resources>
     <string name="app_name">BlackJack</string>
     <string name="finish">ProgressBar is finished.</string>
+
+    <string name="supportHelpCenterPA2">\"Split\" - this action is only available if the player\'s
+        hand contains two cards of the same value.
+        The player doubles their bet, splits their hand in two, and takes two additional cards.
+        The two hands are then played independently.</string>
+    <string name="supportHelpCenterPA3"> \"Hit\" - the player takes another card.
+        This action can be repeated until the value of the hand exceeds 21 points.</string>
+    <string name="supportHelpCenterPA4">\"Double\" - the player doubles their bet, takes another card, and stands.</string>
+    <string name="supportHelpCenterPA5"> \"Stand\" - the player takes no more cards and keeps their current hand.</string>
+    <string name="supportHelpCenterPA6"> If the value of the player\'s hand exceeds 21 points, they lose the round. </string>
+
+    <string name="supportHCDealer1"> Once all players have stood, the dealer turns their face-down card over.</string>
+    <string name="supportHCDealer2">If necessary, the dealer can take additional cards until they have 17 or more points.
+        If the dealer\'s score exceeds 21, all players who have not gone bust automatically win regardless of their score. </string>
+
+    <string name="supportHCInsurance">Special case: if the dealer has a face-up ace, the players have the option to place an additional
+        \"insurance\" bet equal to half of their original bet. Once all players have made a decision, the dealer looks
+        at their face-down card. If the dealer has blackjack, a payout of 2:1 is paid on all "insurance" bets.
+        If the dealer does not have blackjack, all insurance bets go to the pot and the game continues as usual. </string>
+
+    <string name="supportHCCountingPoints">The following card values are used when counting points: the cards from 2 to 10 are worth
+        a number of points equal to the card\'s face value. The card J,Q and K are worth 10 points. Ace is worth 1 or 11 depending
+    on which point value prevents the hand from exceeding 21.</string>
+    
+    <string name="supportCS2">To learn more about the rules and the game interface, please go to \"Support\" in the main menu,
+        then to the \"Help center\" tab. Note\: this is just a basic Blackjack tutorial that teaches you how to play,
+        not how to win.</string>
+
+    <string name="supportCS3">History of game events can be found on the "Notifications" tab in the personal messages menu.
+        All your achievements and actions are displayed in chronological order beginning with the most recent. </string>
+
+    <string name="supportCS4">The Lobby is a place where you can watch currently active games, learn more about them and
+        choose the table you\'d like to join. Advanced players spend a lot of time studying in the Lobby, checking the average
+        bank and observing players' behavior to get an advantage in the game. Choosing a table in the Lobby is very important in
+        getting the best-suited game for you and increase your profits.</string>
+
+    <string name="supportCS5">You will see the amounts you can raise your bet as chips you can tap to add the corresponding value
+        to your bet. However, you can also turn on "raise control" in the settings. This will allow you to hold the "bet" button
+        and slide your finger up to raise the bet.</string>
+
+
+    <string name="supportCS6">This may be caused by an unstable Internet connection. When playing, please make sure your connection
+        is stable. </string>
+
+    <string name="supportCS7">A star symbol next to a fellow player\'s nickname means that this user is on your friends list.</string>
+
+    <string name="supportCS8">To save and share a special moment from the game, tap the bottom left \"dots\" button, then tap the
+        camera icon and choose one of the following options\: save on your device, send via e-mail, or post on Facebook wall.
+        If e-mail is not on the list, ensure that you have e-mail set up on your device.</string>
+
+
+    <string name="supportCP1">Registration is not needed to start playing. You can play as guest, but in this case your account
+        will be linked to a certain device. If you would like to continue playing and have all your achievements and score saved,
+        you will have to use this device. You will not be able to restore your guest account, if your device gets lost or broken.</string>
+
+
+    <string name="supportCP2">After getting registered you will be able to create your game profile. All your achievements, chips,
+        coins and property will be stored in this profile.</string>
+    <string name="supportCP3">Please use the registration form provided in the game menu. You will have to enter your e\-mail,
+        password and nickname. If you wish, you can also upload your userpic. We suggest that you use a real email, in order we
+        will be able to help you restore your password. If you have a social network profile, you can use it as a game profile.</string>
+
+    <string name="supportCP4">Your ID is of 9 or 10 digit number, indicated in your profile in the application or on the website.
+        Please remember to provide your ID when contacting technical support.</string>
+
+    <string name="supportCP5"> Unfortunately, you cannot change your login. But you can register a new account and choose any
+        other username.</string>
+
+    <string name="supportCP6"> To restore your password please tap "Forgot your password?" link and enter your data in the form
+        provided. We suggest that you use a real email. In case you have used non-existent email address or the address you have
+        indicated is not available anymore, please use our contact form to receive any further instructions from our technical
+        support</string>
+
+    <string name="supportCP7">An account cannot be deleted. If you wish, you can create a new account. Please note that you can
+        use up to 20 accounts on one device (including the guest account)</string>
+
+    <string name="supportCP8">To enter game profile, please tap the block with your userpic, name and balance in the main menu. </string>
+
+    <string name="supportCP9">To change your nickname tap on your nickname in the profile settings (or pencil pic next to it)
+        and enter a new one, than tap \"Done\".</string>
+
+    <string name="supportCP10">Tap on your current userpic in the game profile settings. Select \"New\" in the drop-down menu,
+        then take a picture or choose a photo from your device gallery or another existing photo. If you logged in for the first
+        time using your Facebook account, your Facebook avatar will be used.</string>
+
+    <string name="supportCP11">Enter \"Profile\" in the main menu, then tap the line beyond your avatar and enter a new status.
+        Leave this field empty, if you do not want anything to be displayed in the status field.</string>
+
+    <string name="supportCP12">\"Location\" indicates the region you are currently in. To update your location please tap corresponding
+        icon in the game profile. To determine your location on the website profile please tap \"Determine\" next to \"Location\"
+        in your ID line on the right from the userpic</string>
+
+    <string name="supportCP13">Please, make sure that the location settings on your device are activated and our application has
+        access to it. If the location is not determined at specified settings, then try to reinstall the application and allow the
+        determination of the location when you first start it. </string>
+
+    <string name="supportCP14">You can buy property with chips or coins. Property does not change anything in the game process,
+        but can indicate your game status. To buy property, please sign up to your account, tap \"Property\" and use purchase menu.
+        You can give property to your friends or any user you like. To sell property please use a corresponding option in the game
+        profile menu. Please take into account that you will get back only 10% of the price. When selling a property given to you
+        by other players, you do not receive anything. Objects are just removed from your profile</string>
+
+    <string name="supportCP15">Sitting at the table please tap on the glass icon next to your userpic, then choose a gift.
+        Gift will be displayed next to the player\'s avatar. Property will be displayed in the corresponding tap of the user\'s
+        profile. Please note, that the gifts are temporary, unlike property that is permanent. The gifts last as long as you play
+        at one table, or several days, if they are VIP gifts</string>
+
+    <string name="supportCP16">Tap glass or house icon next to player\'s userpic. Choose the gift and confirm the purchase.
+        To give gifts to all the players at the table please choose \"buy for all\" in the purchase menu.</string>
+
+    <string name="supportCP17">In case you do not like the gift you have bought or you have been given, you can substitute it
+        with a new one. Tap on the current gift (the spot where you usually see the glass icon), then choose a new one. Then it
+        will be displayed next to your avatar. In the exactly same way you can substitute other player's gift. Besides, gifts
+        disappear when you exit the app. VIP gifts are the only exception. </string>
+
+    <string name="supportCP18">According to Facebook rules, users cannot buy alcohol and tobacco while playing in this social
+        network.</string>
+
+    <string name="supportCP19">Achieves is an indicator of your gaming progress. To look through the list of achieves please go
+        to the profile and tap \"Achiev\'s\". Tap the achieve to know what did you receive it for. You can also look through your
+        achieves on the website profile.</string>
+
+    <string name="supportCP20"> In the mobile apps some icons are hidden in the slighting panel - it is shown with page indicators
+        in the lower right corner of the main menu. With the move of your finger you can go to Tournaments, Invite, Store, Tutorial
+        and Signing out your profile. </string>
+
+
+    <string name="supportGS1">To enter game settings you need to tap the gear icon in the upper right angle of the main menu.</string>
+
+    <string name="supportGS2">Automatically game language is the same as configured in your device. However,
+        you can select English, available in any version of the game. For this enable "Localization" option in the game settings. </string>
+
+
+    <string name="ChangeAvatar"> To change your avatar, go to your profile and tap the avatar, then choose a default picture,
+        take a photo, or upload a photo. Also, you are able to change your avatar on www.pokerist.com. Log into your account
+        on the website, then aim a cursor on your nickname and select the \"Change avatar\" option. Certain types of avatars
+        cannot be used in our game. Also, please remember that our games are 12\+. Please abstain from using images with any
+        text symbols, images of cigarettes and alcohol, any messages or logos from other poker rooms, immodest clothing, pictures
+        with weapons and any images that encourage hatred due to religion, nationality and so on.</string>
+
+
+    <string name="Nickname">To change your nickname, log into your profile and tap your nickname, then enter your new one.
+        You can also use emojis for your nickname. To change your status, log into your profile and tap on your status above
+        your avatar or on the \"Say something to your friends\" line. Once here you can enter your new status. \nIf you still have any
+        problem with your nickname/status please contact us. </string>
+
+    <string name="supportGS5"></string>
+    <string name="supportGS6"></string>
+    <string name="supportGS7"></string>
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

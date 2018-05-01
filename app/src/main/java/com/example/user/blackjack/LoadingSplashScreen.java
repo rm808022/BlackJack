@@ -44,9 +44,9 @@ public class LoadingSplashScreen extends AppCompatActivity implements OnProgress
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        number_progress_bar.incrementProgressBy(1);
+                        number_progress_bar.incrementProgressBy(5);
                         Log.i("TAG",""+number_progress_bar.getProgress());
-                        if(number_progress_bar.getProgress() == 99){
+                        if(number_progress_bar.getProgress() == 95){
                             Intent i = new Intent(LoadingSplashScreen.this,MainActivity.class);
                             Log.i("TAG",""+"");
                             startActivity(i);
