@@ -147,19 +147,179 @@
         your avatar or on the \"Say something to your friends\" line. Once here you can enter your new status. \nIf you still have any
         problem with your nickname/status please contact us. </string>
 
-    <string name="supportGS5"></string>
-    <string name="supportGS6"></string>
-    <string name="supportGS7"></string>
+    <string name="RegisterAccount"> To play, it is enough to simply enter the application \- this creates a guest account.
+        The guest account is linked to your device and can be lost if your device is lost or corrupted, if the OS is reinstalled
+        on the device or if there is a system error on the device. We recommend that you register an account using your email
+        address or Facebook account. By registering, you ensure that your game progress will be saved. Please note that only an
+        account registered to an email address has a password. lithe email address you initially provide is unavailable to access,
+        it will be very difficult to reset your password or gain access to your account if you forget your password. \nPlease follow
+        the instruction below to register your Pokerist account. Once registered, you will be able to play on any device with this
+        profile as all of your progress and friends will be saved to the account. \n1.Click \"Sign-in\". \n2.Click "New account".
+        \n3.Follow the steps to complete registration.</string>
 
 
+    <string name="lostAccount"> Don\'t worry, we\'ll be able to help you get your account access back! Please provide us with the
+        following information about your lost account using the form below: \n1. What avatar did this account have? \n2. Nickname?
+        \n3. The number of chips/gold that this account had? \n4. Was the account a guest account or was it registered?</string>
 
 
+    <string name="findId">You can see your ID in your profile. It is the set of numbers (for example 49\-8957\-6014) under your
+        username. To find out your ID number, enter your profile and you will see your ID to the right of your avatar. This number
+        is unique for each player and it cannot be changed \- only you can see it in your profile. You can share this number with
+        your friend, so they can find you in the game.</string>
 
 
+    <string name="hackedAccount"> If you\'ve discovered that your account has been hacked, immediately log on to our website and
+        change your password. If you use a simple password on your e-mail account, we strongly recommend that you change that one too.
+        After changing your password, contact tech support. In some cases, you\'ll need to answer a few questions to confirm that
+        the account belongs to you.</string>
 
 
+    <string name="CantBuyChips">Sometimes your network or device settings may cause an error when you open the store. Please check
+        whether the store and rules load. If they do not, please describe these symptoms to our support department to get a quick
+        solution from us. A screenshot of the error will help us solve your problem faster. \nAndroid \- In-app Purchases Locked \nTo
+        check whether your in\-app purchases are locked, go to Play Market -Press the menu icon - Settings - Parental Control.
+        Ensure that parental control is switched off. </string>
 
 
+    <string name="freeChips">Depending on the platform you play on, you have various options for getting free chips. You can find
+        all our advertisement offers in the in-game store. You can watch video ads, complete quests and get a daily bonus. In
+        addition, you can get rewards for completing quests and participate in promotional events on our Facebook group. Don\'t
+        worry if you\'ve run out of chips, you always have the ability to get free chips or buy yourself a few to increase your
+        balance. </string>
 
+    <string name="earnAndUseChips">You can earn coins by joining our groups on social networks (Facebook,Twitter, Instagram) to
+        take part in the competitions held there. You can win free chips as well as coins! You can also purchase gold coins in our
+        store or get them by taking a prize-winning place in the weeklytournament. We\'re looking forward to seeing you on our
+        social networkpages! \nYou can use coins to buy property either for yourself or as a gift to other players. You can also
+        use coins to speed up assembling card collections, buy and give gifts at a table or move on to the next round of
+        a Shootout tournament on Pokerist, if you didn't win the previous round.</string>
+
+    <string name="transferChips">How Do I Transfer Chips To Another Player? Giving a gift of chips is an excellent way to make new
+        friends or help your current ones! You can transfer chips to friends and other players directly while you play. The maximum
+        number of chips you can transfer to other players is 100,000. To transfer chips to friends, visit your friend\'s profile
+        from the main game menu, tap the chip icon with a little arrow and select the amount of chips you want to send. To transfer
+        chips to other players during play, tap the other player's avatar at the table, press the button of the chip with an arrow
+        and select the amount of chips you want to send. </string>
+
+    <string name="chipsGone">Please indicate the sum you hhave lost and the date when the loss occured. Indicate the reason for the
+        loss(e.g. a disconnection) if you know it.</string>
+
+    <string name="lostGame">Don\'t forget to check the rules of the game in our Help Center. If you still have a question please contact
+        our support team and attach the following information to your request: the date and time of the game along with information
+        about your or dealer's cards.</string>
+
+    <string name="dealerCardCheck">Please note, the game rules may differ depending on the casino and there may also be a lot of
+        differences and variations. In our app, the classic Blackjack rules are used, when the dealer offers you an insurance
+        option only if they received an Ace as their first card. You can learn more about the current game rules in the \"Support\"
+        section, \"Help center\" tab. </string>
+
+    <string name="loose21">According to the rules of the game,blackjack is 21 points scored with two cards. If you score 21 with
+        three or more cards,you will loose with dealer if they get 21 points with two cards exactly</string>
+
+    <string name="splitCards">If the first two cards you are dealt have the same rank tou have the option to split them in two hands.
+        In this case, you can play each hand in turn and have a chance to win with either hand</string>
+
+    <string name="disconnectedTournament">We\'re very sorry to hear that your tournament was interrupted in such an unpleasant manner.
+        We understand how frustrating this must have been. \nPlease contact us and provide them with information about the date, time
+        and fee of the tournament during which the error occurred.</string>
+
+
+<string name="locationNotSet"> Please enter your profile and update your location, then allow it to be used, then wait several seconds.
+    Your location should change. If this does not occur, try reinstalling the application and repeat the same actions again. Please
+    contact us if your location does not update after reinstalling. </string>
+
+    <string name="hideLocation">Location in our game helps you find your friends to play with, but we respect your right to hide.
+        Please contact us to help you with this request.</string>
+
+    <string name="manyAccountsDevice"> According to the User Conditions of KamaGames\' products, you can have no more than 4
+        accounts at once. If you have received this error message, try to log in from the account which you registered first on
+        your device. If this does not help, you\'ll need to log in from another device. Contact our support service if you have
+        difficulties completing these instructions. </string>
+
+    <string name="freeChipsSection"> If you didn\'t receive rewards for video offers or quests sections, please contact our support
+        team and be ready to answer some questions, our team will do their best to help you. \nPlease remember, that we have a limit
+        of 20 videos in 24 hours. When you have watched them, the free chips tab will disappear. If you don't see offers at all,
+        don\'t worry, our partners will add new offers shortly for you to enjoy. Make sure you visit this section again to get them. </string>
+
+    <string name="crashesApp">The game may crash or freeze for various reasons. Before contacting support, please check your internet
+        connection. If your internet connection is stable and fast, try restarting your device. If restarting does not help, try
+        reinstalling the application from the official store for your device (App Store, Play Market etc.). If these tips do not
+        help you, contact our support service. </string>
+
+
+    <string name="problemWithInternet">Our game is a real-time online game and requires a stable Internet connection. If yourgame
+        freezes or periodically crashes during gameplay, check the stability of your internet connection using a third-party service
+        such as http://speedtestmett We strongly recommend a stable WiFi connection with broadband internet or a persistent mobile
+        connection without artificial speed limits, such as 3G or LTE.</string>
+
+    <string name="changeGame">In our game, you can access Texas Poker, Omaha, Slots, Set Poker, Split Bet Poker, Baccarat, Roulette
+        and Blackjack from one application. To change the game press \"Select game\" button, which is located in the top central
+        part of your starting screen, then choose the game you would like to play. We would like to remind you that you can use one
+        account for all our games. Have fun playing! </string>
+
+    <string name="dontLikeGift"> If you do not like a gift that you bought or received, you can exchange it fora more expensive gift.
+        Tap the current gift (the \"gift\" icon is usually located in the same place), then buy the new gift. It will then be
+        displayed next to your avatar. You can also exchange another player\'s gift. Gifts disappear after a certain time. It
+        is worth remembering that VIP gifts for gold last longer than ordinary gifts. </string>
+
+    <string name="disbaleGifts">You can disable the display of gifts at the game table if they distract you from playing.
+    To do this, use the corresponding switch in the setting menu. Note that you will not be able to give or receive gifts if
+        you do this</string>
+
+    <string name="cantWriteMessageChat">While playing at a table, tap the chat icon in the lower right corner. If you don\'t
+        see messages from the other players at the table, but see them in the chat window, go to \"Settings\"and turn \"Block Chat\"
+        off If you still can\'t see messages from other players even in the chat window, please tap the \"LOCK\" icon in the lower
+        right corner of the screen to check whether other players have been blocked from the chat. If the problem persists even
+        after following these instructions please contact us.</string>
+
+    <string name="deletePrivateMsg">Tap and hold your finger on the message you want to delete, then select the \"Delete\" option in
+    the resulting menu. You can delete only your own message. This will also delete them for other participant in the conversation</string>
+
+        <string name="blockChat">You can not only play at the game table, but also chat. Players\' messages are displayed in
+            floating windows above their avatars. If a message from another player bothers you, you can block messages from
+            them in a special menu by tapping the icon with a lock located next to the \"chat\" icon. Select the specific players
+            whose messages you don\'t want to see. You can also block conversations from all players at once. To do this, enable
+            chat blocking in the game settings. </string>
+    
+    <string name="dailyQuest">Please send us the full name of the quest and description of the problem. We\'ll try to solve
+        it as quickly as possible   </string>
+
+
+    <string name="problemWithAchievement">Please send us the full name of the achievement and description of the problem. We\'ll try to solve
+        it as quickly as possible</string>
+
+    <string name="dailyBonusQuestion"> If you want to get to know the details about the sum of daily bonus, or time when you\'ll
+        be able to receive the next one, please click on the \"Daily bonus\" tab at the right bottom angle of the main screen.
+        If you didn't receive your daily bonus, please contact us</string>
+
+    <string name="propertyGift"> You can buy gifts and property for chips and gold coins. Property does not influence gameplay,
+        but is an indicator of your success in the game. To buy property, enter your profile, tap the \"Property\" tab and use the
+        purchase menu. You can give property to friends or players that you like. Property that you buy can be sold later by using
+        the corresponding menu item in your profile. However, bear in mind that in this case you will only get 10% of the value back.
+        Gifted property cannot be sold, only deleted. If you collect all the property in one category, you\'ll get some luxury
+        property that cannot be purchased. \nGifts do not affect gameplay, but show your mood or attitude to another player.
+        When sitting at a game table, press the "gift" button next to your avatar or the avatar of the player to whom you want
+        to give a gift, then select . The gift will be displayed next to the player's avatar. Note that all the gifts, in contrast
+        to property, disappear with time. They persist for the duration of the game at that table or for several days
+        (for example, VIP gifts for gold).
+</string>
+
+
+    <string name="addFriendList">You can add a player to your friends list while sitting at the game table or you can find a friend
+        using their nickname or ID. To add a friend through the search, enter the Friends menu in the upper left corner of the screen,
+        then go to the "Search friends" tab and enter the nickname or ID of the player. To add a player at a table, tap on their avatar
+        and tap the icon with the + symbol, then confirm the action.</string>
+
+    <string name="joinFriendGame">While in the game\'s main menu, tap your friend\'s icon. If your friend is currently at a table,
+        you\'ll see the \"table\" icon. Tap it, then press \"Play\". You can also invite a friend to play with you. Tap the \+ on a
+        free position at your table and select a friend. Your friend will receive an invitation to play with you. </string>
+
+    <string name="cantFindFriend">You can find a friend using their nickname or ID number. If you\'re experiencing a problems
+    while seaching for a friend please contact support and indicate the id of the friend you want to add</string>
+
+    <string name="deleteFriend">While in the game\'s main menu, press the Friends button in the upper left corner of the screen.
+        Select the friend you want to delete and tap the icon with a \- symbol. After deleting the friend, you will not be able to
+        join them at a table, invite them to play with you or send/receive private messages with them.</string>
 
 </resources>
