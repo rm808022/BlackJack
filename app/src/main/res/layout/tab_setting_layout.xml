@@ -11,7 +11,8 @@
         android:layout_height="300dp"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
 
 
 
@@ -46,539 +47,614 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/llGeneral"
-            android:layout_below="@+id/llSettingHeader"
             android:layout_width="match_parent"
+            android:layout_below="@+id/llSettingHeader"
             android:layout_height="match_parent"
-            android:padding="20dp"
             android:orientation="vertical"
-            android:background="@drawable/bg_main"
-            android:visibility="visible">
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_outer_layout">
 
-            <ScrollView
+
+            <LinearLayout
+                android:id="@+id/llGeneral"
+                android:layout_margin="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_inner_layout"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Voice"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <SeekBar
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sounds"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <SeekBar
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Multiple screens"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="20dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Level 15 required"
+                                    android:textSize="15dp"
+                                    android:textColor="#7c0303"/>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Message"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="English"
+                                    android:textSize="15dp"
+                                    android:layout_marginRight="20dp"
+                                    android:textColor="#ffffff"/>
+
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:text="Select"
+                                    android:textSize="10sp"
+                                    android:background="@drawable/bg_select_language"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Block chat"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Friend's status"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Display gifts"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="VIP interface"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Vibration"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Voice recognition"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#063f84"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Do not allow \nfriend request"
+                                android:textColor="#ffffff"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+
+                                <Switch
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNotification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="2dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_inner_layout">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Voice"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <SeekBar
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Daily bonus"
+                        android:textColor="#ffffff"
+                        android:gravity="right"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="Gifts"
+                        android:textColor="#ffffff"
+                        android:layout_margin="10dp"
+                        android:gravity="right"
+                        android:textSize="20dp" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sounds"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <SeekBar
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
-
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="New friends"
+                        android:textColor="#ffffff"
+                        android:layout_margin="10dp"
+                        android:gravity="right"
+                        android:textSize="20dp" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Multiple screens"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="20dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Level 15 required"
-                                android:textSize="15dp"
-                                android:textColor="#7c0303"/>
-
-
-
-                        </LinearLayout>
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="Invitation to table"
+                        android:textColor="#ffffff"
+                        android:layout_margin="10dp"
+                        android:gravity="right"
+                        android:textSize="20dp" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Message"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="English"
-                                android:textSize="15dp"
-                                android:layout_marginRight="20dp"
-                                android:textColor="#ffffff"/>
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="20dp"
-                                android:text="Select"
-                                android:textSize="10sp"
-                                android:background="@drawable/bg_select_language"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="Message"
+                        android:textColor="#ffffff"
+                        android:layout_margin="10dp"
+                        android:gravity="right"
+                        android:textSize="20dp" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Block chat"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        />
 
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        />
 
-                        </LinearLayout>
+                </LinearLayout>
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Friend's status"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Receiving daily bonus"
+                        android:textColor="#ffffff"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Display gifts"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Receipt of chips and gift from friends"
+                        android:textColor="#ffffff"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="VIP interface"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Friendship confirmation"
+                        android:textColor="#ffffff"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Vibration"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Invitation to join play at a table"
+                        android:textColor="#ffffff"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Voice recognition"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Do not aloow \nfriend request"
-                            android:textColor="#ffffff"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="15dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-
-
-                            <Switch
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-
-
-
-
-
-
-
-
+                        android:layout_height="wrap_content"
+                        android:text="Messages received from friends"
+                        android:textColor="#ffffff"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
 
                 </LinearLayout>
 
 
-            </ScrollView>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/llNotification"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_below="@+id/llSettingHeader"
-            android:visibility="gone"
-            android:background="@drawable/bg_main">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Daily bonus"
-                    android:textColor="#ffffff"
-                    android:gravity="right"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Gifts"
-                    android:textColor="#ffffff"
-                    android:layout_margin="10dp"
-                    android:gravity="right"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="New friends"
-                    android:textColor="#ffffff"
-                    android:layout_margin="10dp"
-                    android:gravity="right"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Invitation to table"
-                    android:textColor="#ffffff"
-                    android:layout_margin="10dp"
-                    android:gravity="right"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Message"
-                    android:textColor="#ffffff"
-                    android:layout_margin="10dp"
-                    android:gravity="right"
-                    android:textSize="20dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    />
-
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    />
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    />
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    />
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Receiving daily bonus"
-                    android:textColor="#ffffff"
-                    android:gravity="left"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Receipt of chips and gift from friends"
-                    android:textColor="#ffffff"
-                    android:gravity="left"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Friendship confirmation"
-                    android:textColor="#ffffff"
-                    android:gravity="left"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Invitation to join play at a table"
-                    android:textColor="#ffffff"
-                    android:gravity="left"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Messages received from friends"
-                    android:textColor="#ffffff"
-                    android:gravity="left"
-                    android:layout_margin="10dp"
-                    android:textSize="20dp" />
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
 
 
 
@@ -586,14 +662,13 @@
     </RelativeLayout>
 
     <ImageView
+        android:id="@+id/cancel"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/error"
-        android:layout_below="@+id/rlBodySettingMain"
-        android:layout_toRightOf="@+id/rlBodySettingMain"
-        android:layout_marginTop="-20dp"
-        android:layout_marginLeft="-20dp"
-        android:id="@+id/cancel"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/error" />
 
 </RelativeLayout>
 

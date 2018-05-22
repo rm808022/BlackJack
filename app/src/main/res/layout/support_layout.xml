@@ -12,9 +12,9 @@
         android:layout_centerHorizontal="true"
         android:layout_height="300dp"
         android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#ffffff">
+        android:layout_marginRight="10dp">
 
         <LinearLayout
             android:id="@+id/llSuppportHeader"
@@ -51,6 +51,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/llSuppportHeader"
             android:background="@drawable/bg_outer_layout">
 
@@ -59,19 +60,20 @@
                 android:id="@+id/rlBodySupport"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
                 android:background="#083f63"
                 android:visibility="visible">
 
 
+                //Account and others right side scroll
                 <ScrollView
                     android:id="@+id/scSupport"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#003865">
+                    android:background="@drawable/bg_scroll_layout">
 
                     <LinearLayout
                         android:id="@+id/llSupport"
@@ -93,6 +95,7 @@
                             android:orientation="vertical">
 
                             <LinearLayout
+                                android:id="@+id/llAccountRelatedQuestion"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -125,6 +128,7 @@
                                 android:background="#03334a" />
 
                             <LinearLayout
+                                android:id="@+id/llFinancialQuestion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -154,6 +158,7 @@
                                 android:background="#03334a" />
 
                             <LinearLayout
+                                android:id="@+id/llRulesQuestion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -183,6 +188,7 @@
                                 android:background="#03334a" />
 
                             <LinearLayout
+                                android:id="@+id/llTechnicalQuestion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -194,7 +200,7 @@
                                 <ImageView
                                     android:layout_width="24dp"
                                     android:layout_height="24dp"
-                                    android:src="@drawable/profile" />
+                                    android:src="@drawable/mechanical_gears" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -212,6 +218,7 @@
                                 android:background="#03334a" />
 
                             <LinearLayout
+                                android:id="@+id/llGamesQuestion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -242,6 +249,7 @@
                                 android:background="#03334a" />
 
                             <LinearLayout
+                                android:id="@+id/llFriendsQuestion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -253,7 +261,7 @@
                                 <ImageView
                                     android:layout_width="24dp"
                                     android:layout_height="24dp"
-                                    android:src="@drawable/danger" />
+                                    android:src="@drawable/men_shaking_hands" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -290,11 +298,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@+id/scSupport"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:background="@drawable/bg_inner_layout"
                     android:layout_margin="5dp">
 
+                    //first screen of support
                     <LinearLayout
+                        android:id="@+id/llSupportMainFirstLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -347,11 +357,14 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
+                                //accountrelated question
+
                                 <LinearLayout
+                                    android:id="@+id/llAccountRelatedQuestionLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
-                                    android:visibility="gone">
+                                    android:visibility="visible">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -382,12 +395,10 @@
                                             android:textColor="#ffffff"
                                             android:layout_marginLeft="-5dp" />
 
-
-
                                     </LinearLayout>
 
                                     <TextView
-
+                                        android:id="@+id/tvAvatar"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="@string/ChangeAvatar"
@@ -420,75 +431,84 @@
 
                                     </LinearLayout>
 
-                                    <TextView
-
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Please contact us and explain your issue in detail"
-                                        android:textColor="#9bbad2"
-                                        android:textStyle="italic" />
-
-
-                                    <EditText
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:background="#ffffff"
-                                        android:hint="Describe the problem"
-                                        android:textStyle="italic" />
-
                                     <LinearLayout
+                                        android:id="@+id/llChangeAvatar"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="10dp"
-                                        android:orientation="horizontal">
+                                        android:orientation="vertical">
 
-
-                                        <LinearLayout
+                                        <TextView
+                                            android:id="@+id/tvChangeAvartar"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:background="#008bd1"
+                                            android:text="Please contact us and explain your issue in detail"
+                                            android:textColor="#9bbad2"
+                                            android:textStyle="italic" />
+
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:background="#ffffff"
+                                            android:hint="Describe the problem"
+                                            android:textStyle="italic" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="10dp"
                                             android:orientation="horizontal">
 
-                                            <ImageView
-                                                android:layout_width="24dp"
-                                                android:layout_height="24dp"
-                                                android:layout_marginLeft="15dp"
-                                                android:src="@drawable/camera" />
 
-
-                                            <TextView
+                                            <LinearLayout
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_marginLeft="15dp"
-                                                android:gravity="center"
-                                                android:text="ADD SCREENSHOT"
+                                                android:background="#008bd1"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="24dp"
+                                                    android:layout_height="24dp"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:src="@drawable/camera" />
+
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:gravity="center"
+                                                    android:text="ADD SCREENSHOT"
+                                                    android:textColor="#ffffff"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="30dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:gravity="right"
+                                                    android:text="0/3"
+                                                    android:textColor="#ffffff" />
+
+                                            </LinearLayout>
+
+                                            <Button
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="30dp"
+                                                android:text="SEND"
+                                                android:background="#247d00"
                                                 android:textColor="#ffffff"
-                                                android:textStyle="bold" />
+                                                android:layout_marginLeft="40dp"
+                                                android:textSize="15dp" />
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginLeft="30dp"
-                                                android:layout_marginRight="10dp"
-                                                android:gravity="right"
-                                                android:text="0/3"
-                                                android:textColor="#ffffff" />
 
                                         </LinearLayout>
-
-                                        <Button
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="30dp"
-                                            android:text="SEND"
-                                            android:background="#247d00"
-                                            android:textColor="#ffffff"
-                                            android:layout_marginLeft="40dp"
-                                            android:textSize="15dp" />
-
-
                                     </LinearLayout>
+
+
 
                                     <View
                                         android:layout_width="match_parent"
@@ -517,75 +537,83 @@
 
                                     </LinearLayout>
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textColor="#9bbad2"
-                                        android:textStyle="italic"
-                                        android:text="@string/Nickname"/>
-
-
-                                    <EditText
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:background="#ffffff"
-                                        android:hint="Describe the problem"
-                                        android:textStyle="italic" />
-
                                     <LinearLayout
+                                        android:id="@+id/llNickname"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="10dp"
-                                        android:orientation="horizontal">
+                                        android:orientation="vertical">
 
-
-                                        <LinearLayout
+                                        <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:background="#008bd1"
+                                            android:textColor="#9bbad2"
+                                            android:textStyle="italic"
+                                            android:text="@string/Nickname"/>
 
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:background="#ffffff"
+                                            android:hint="Describe the problem"
+                                            android:textStyle="italic" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="10dp"
                                             android:orientation="horizontal">
 
-                                            <ImageView
-                                                android:layout_width="24dp"
-                                                android:layout_height="24dp"
-                                                android:layout_marginLeft="15dp"
-                                                android:src="@drawable/camera" />
 
-
-                                            <TextView
+                                            <LinearLayout
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_marginLeft="15dp"
-                                                android:gravity="center"
-                                                android:text="ADD SCREENSHOT"
+                                                android:background="#008bd1"
+
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="24dp"
+                                                    android:layout_height="24dp"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:src="@drawable/camera" />
+
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:gravity="center"
+                                                    android:text="ADD SCREENSHOT"
+                                                    android:textColor="#ffffff"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="30dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:gravity="right"
+                                                    android:text="0/3"
+                                                    android:textColor="#ffffff" />
+
+                                            </LinearLayout>
+
+                                            <Button
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="30dp"
+                                                android:text="SEND"
+                                                android:background="#247d00"
                                                 android:textColor="#ffffff"
-                                                android:textStyle="bold" />
+                                                android:layout_marginLeft="40dp"
+                                                android:textSize="15dp" />
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginLeft="30dp"
-                                                android:layout_marginRight="10dp"
-                                                android:gravity="right"
-                                                android:text="0/3"
-                                                android:textColor="#ffffff" />
 
                                         </LinearLayout>
-
-                                        <Button
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="30dp"
-                                            android:text="SEND"
-                                            android:background="#247d00"
-                                            android:textColor="#ffffff"
-                                            android:layout_marginLeft="40dp"
-                                            android:textSize="15dp" />
-
-
                                     </LinearLayout>
+
+
 
                                     <View
                                         android:layout_width="match_parent"
@@ -613,13 +641,22 @@
 
                                     </LinearLayout>
 
-                                    <TextView
-
-                                        android:layout_width="wrap_content"
+                                    <LinearLayout
+                                        android:id="@+id/llRegisterAccount"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/RegisterAccount"
-                                        android:textColor="#9bbad2"
-                                        android:textStyle="italic" />
+                                        android:orientation="vertical">
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/RegisterAccount"
+                                            android:textColor="#9bbad2"
+                                            android:textStyle="italic" />
+                                    </LinearLayout>
+
+
 
                                     <View
                                         android:layout_width="match_parent"
@@ -646,75 +683,84 @@
 
                                     </LinearLayout>
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textColor="#9bbad2"
-                                        android:textStyle="italic"
-                                        android:text="@string/lostAccount"/>
-
-
-                                    <EditText
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:background="#ffffff"
-                                        android:hint="Describe the problem"
-                                        android:textStyle="italic" />
-
                                     <LinearLayout
+                                        android:id="@+id/llLostAccount"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="10dp"
-                                        android:orientation="horizontal">
+                                        android:orientation="vertical">
 
-
-                                        <LinearLayout
+                                        <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:background="#008bd1"
+                                            android:textColor="#9bbad2"
+                                            android:textStyle="italic"
+                                            android:text="@string/lostAccount"/>
 
+
+                                        <EditText
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:background="#ffffff"
+                                            android:hint="Describe the problem"
+                                            android:textStyle="italic" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="10dp"
                                             android:orientation="horizontal">
 
-                                            <ImageView
-                                                android:layout_width="24dp"
-                                                android:layout_height="24dp"
-                                                android:layout_marginLeft="15dp"
-                                                android:src="@drawable/camera" />
 
-
-                                            <TextView
+                                            <LinearLayout
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_marginLeft="15dp"
-                                                android:gravity="center"
-                                                android:text="ADD SCREENSHOT"
+                                                android:background="#008bd1"
+
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="24dp"
+                                                    android:layout_height="24dp"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:src="@drawable/camera" />
+
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:gravity="center"
+                                                    android:text="ADD SCREENSHOT"
+                                                    android:textColor="#ffffff"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="30dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:gravity="right"
+                                                    android:text="0/3"
+                                                    android:textColor="#ffffff" />
+
+                                            </LinearLayout>
+
+                                            <Button
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="30dp"
+                                                android:text="SEND"
+                                                android:background="#247d00"
                                                 android:textColor="#ffffff"
-                                                android:textStyle="bold" />
+                                                android:layout_marginLeft="40dp"
+                                                android:textSize="15dp" />
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginLeft="30dp"
-                                                android:layout_marginRight="10dp"
-                                                android:gravity="right"
-                                                android:text="0/3"
-                                                android:textColor="#ffffff" />
 
                                         </LinearLayout>
-
-                                        <Button
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="30dp"
-                                            android:text="SEND"
-                                            android:background="#247d00"
-                                            android:textColor="#ffffff"
-                                            android:layout_marginLeft="40dp"
-                                            android:textSize="15dp" />
-
-
                                     </LinearLayout>
+
+
 
                                     <View
                                         android:layout_width="match_parent"
@@ -948,7 +994,9 @@
 
                                 </LinearLayout>
 
+                                //financial Question
                                 <LinearLayout
+                                    android:id="@+id/llFinancialQuestionLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
@@ -1488,7 +1536,9 @@
 
                                 </LinearLayout>
 
+                                //rules question
                                 <LinearLayout
+                                    android:id="@+id/llRulesQuestionLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
@@ -1705,7 +1755,10 @@
 
                                 </LinearLayout>
 
+                                //technical question
+
                                 <LinearLayout
+                                    android:id="@+id/llTechnicalQuestionLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
@@ -2451,7 +2504,10 @@
 
                                 </LinearLayout>
 
+                                //game question
+
                                 <LinearLayout
+                                    android:id="@+id/llGamesQuestionLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
@@ -3147,11 +3203,14 @@
 
                                 </LinearLayout>
 
+                                //friends
+
                                 <LinearLayout
+                                    android:id="@+id/llFriendsLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
-                                    android:visibility="visible">
+                                    android:visibility="gone">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -3535,1307 +3594,10 @@
             </LinearLayout>
 
 
-            <!-- <RelativeLayout
-                android:id="@+id/rlBodySupportFAQ"
-                android:layout_below="@+id/llSuppportHeader"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone"
-                android:background="@drawable/bg_dialog_header">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
-
-                    <ScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                          >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Common Question"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#ffffff"
-                                android:textSize="15dp"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                   >
-
-                                    <TextView
-                                        android:text="1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff"
-                                        />
-                                <TextView
-
-                                    android:text="On what platform is blackjack available?"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="14dp"
-                                    android:textColor="#68bef7"
-                                    android:textStyle="bold"
-                                    />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="The Blackjack app is available for iOS."
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How do you play Blackjack?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS2"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Where can I find my history of game event?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS3"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text='What is the "Lobby"?'
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS4"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="5"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How do i raise my bet?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS5"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="6"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text='Why am i being "Kicked" from the table and cant rejoin it?'
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS6"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="7"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="What does a golden star next to a player's nickname means?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS7"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="8"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I save a screen shot and share it with my friends?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCS8"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Creating a game profile"
-                                android:textStyle="bold"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#ffffff"
-                                android:textSize="15dp"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="what is a guest account?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP1"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Why do i need to register?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP2"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can i register in game?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP3"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How do i know my id?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP4"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="5"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Can i change my login?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP5"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="6"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I restore my password?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP6"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="7"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Can I delete my account?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP7"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="8"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I enter my game profile settings?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP8"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="9"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I change my nickname?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP9"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="10"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can i upload or change my userpic?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP10"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="11"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I change my status?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP11"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="12"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I determine my location?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP12"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="13"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Why my location is not determined?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP13"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="14"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I buy property? "
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP14"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="15"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I buy gifts?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP15"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="16"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I give gifts to another players?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP16"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="17"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="What can I do, if I do not like the gift sent to me?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP17"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="18"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="Why cant I buy alcohol and tabacoo?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP18"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="19"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="What can I get achieves for?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP19"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="20"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can I sign out"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportCP20"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Game setting"
-                                android:textStyle="bold"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#ffffff"
-                                android:textSize="15dp"/>
-
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="15dp"
-                                >
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:text="1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:layout_marginRight="10dp"
-                                        android:textColor="#ffffff" />
-                                    <TextView
-                                        android:text="How can i enter game setting?"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textSize="14dp"
-                                        android:textColor="#68bef7"
-                                        android:textStyle="bold"
-                                        />
-
-                                </LinearLayout>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/supportGS1"
-                                    android:textColor="#ffffff"
-                                    android:layout_marginLeft="16dp"
-                                    android:textSize="14dp"/>
-
-                            </LinearLayout>
-
-
-
-
-
-
-                        </LinearLayout>
-
-
-                    </ScrollView>
-
-
-                </LinearLayout>
-
-
-
-
-            </RelativeLayout>-->
-
             <RelativeLayout
                 android:id="@+id/rlBodyRules"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/llSuppportHeader"
                 android:background="@drawable/bg_dialog_header"
                 android:padding="10dp"
                 android:visibility="gone">
@@ -5225,11 +3987,12 @@
 
     <ImageView
         android:id="@+id/imgVSupportCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
         android:src="@drawable/error" />
 
 </RelativeLayout>

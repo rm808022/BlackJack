@@ -24,7 +24,7 @@
     <string name="supportHCCountingPoints">The following card values are used when counting points: the cards from 2 to 10 are worth
         a number of points equal to the card\'s face value. The card J,Q and K are worth 10 points. Ace is worth 1 or 11 depending
     on which point value prevents the hand from exceeding 21.</string>
-    
+
     <string name="supportCS2">To learn more about the rules and the game interface, please go to \"Support\" in the main menu,
         then to the \"Help center\" tab. Note\: this is just a basic Blackjack tutorial that teaches you how to play,
         not how to win.</string>
@@ -225,7 +225,7 @@
         and fee of the tournament during which the error occurred.</string>
 
 
-<string name="locationNotSet"> Please enter your profile and update your location, then allow it to be used, then wait several seconds.
+    <string name="locationNotSet"> Please enter your profile and update your location, then allow it to be used, then wait several seconds.
     Your location should change. If this does not occur, try reinstalling the application and repeat the same actions again. Please
     contact us if your location does not update after reinstalling. </string>
 
@@ -276,12 +276,12 @@
     <string name="deletePrivateMsg">Tap and hold your finger on the message you want to delete, then select the \"Delete\" option in
     the resulting menu. You can delete only your own message. This will also delete them for other participant in the conversation</string>
 
-        <string name="blockChat">You can not only play at the game table, but also chat. Players\' messages are displayed in
+    <string name="blockChat">You can not only play at the game table, but also chat. Players\' messages are displayed in
             floating windows above their avatars. If a message from another player bothers you, you can block messages from
             them in a special menu by tapping the icon with a lock located next to the \"chat\" icon. Select the specific players
             whose messages you don\'t want to see. You can also block conversations from all players at once. To do this, enable
             chat blocking in the game settings. </string>
-    
+
     <string name="dailyQuest">Please send us the full name of the quest and description of the problem. We\'ll try to solve
         it as quickly as possible   </string>
 
