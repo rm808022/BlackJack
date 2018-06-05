@@ -14,7 +14,10 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -38,16 +41,16 @@ import android.widget.Toast;
 import static android.view.View.GONE;
 
 
-public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener,View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    LinearLayout llSetting,llHeaderCenter,llDialogText,llProfile,linearLayout3,llGeneral,llNotification,llSignin,llSupport,
+    LinearLayout llSetting,llHeaderCenter,llDialogText,llProfile,llGeneral,llNotification,llSignin,llSupport,
             llMessage;
     RelativeLayout rlBodyCenterBody,rlBodyPlayNow,rlBodyLobby;
 
     HorizontalScrollView horizontalScrollView;
 
-    SeekBar sbVoice, sbSounds;
+    SeekBar sbVoice, sbSound;
     private static final int REQUEST_TABBED_DIALOG = 42;
     TextView tvGeneral,tvNotification,tvProfile,tvPlayerOnline,tvFriendsPlayer,tvDialogHeader;
     public int general = 1;
@@ -59,10 +62,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     Context context;
     public Drawable imgValue;
 
-    private static final int Selected_Picture = 1;
-
-
-//    public String[] pageTitle = {"General", "Notifications"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,18 +72,18 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         llDialogText = findViewById(R.id.llDialogText);
         llHeaderCenter = findViewById(R.id.llHeaderCenter);
         llProfile = findViewById(R.id.llProfile);
-        linearLayout3 = findViewById(R.id.linearLayout3);
-        llSignin = findViewById(R.id.llSignin);
-        llMessage = findViewById(R.id.llMessage);
+       // linearLayout3 = findViewById(R.id.linearLayout3);
+       // llSignin = findViewById(R.id.llSignin);
+       // llMessage = findViewById(R.id.llMessage);
         llSupport = findViewById(R.id.llSupport);
         llProfile = findViewById(R.id.llProfile);
 
         tvProfile = findViewById(R.id.tvProfile);
         tvPlayerOnline = findViewById(R.id.tvPlayerOnline);
-        tvFriendsPlayer = findViewById(R.id.tvFriendsPlayer);
+      //  tvFriendsPlayer = findViewById(R.id.tvFriendsPlayer);
         tvDialogHeader = findViewById(R.id.tvDialogHeader);
 
-        horizontalScrollView= findViewById(R.id.horizontalScrollView);
+      //  horizontalScrollView= findViewById(R.id.horizontalScrollView);
 
         rlBodyCenterBody = findViewById(R.id.rlBodyCenterBody);
         rlBodyPlayNow = findViewById(R.id.rlBodyPlayNow);
@@ -98,13 +97,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         llSupport.setOnClickListener(this);
         llMessage.setOnClickListener(this);
         llProfile.setOnClickListener(this);
-      //  sbVoice = findViewById(R.id.sbVoice);
-//        sbVoice.setOnSeekBarChangeListener(this);
-//        sbVoice.setProgress(sbVoice.getMax()/2);
+        rlBodyPlayNow.setOnClickListener(this);
 
-      //  sbSounds = findViewById(R.id.sbSounds);
-        //  sbSounds.setOnSeekBarChangeListener(this);
-        //       sbSounds.setProgress(sbSounds.getMax()/2);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED)
         {
@@ -167,7 +161,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 Uri selectedimageuri=data.getData();
                 String selectedimagepath=getPath(selectedimageuri);
                 Toast.makeText(this, selectedimagepath, Toast.LENGTH_SHORT).show();
-           //     profileImg.setImageURI(selectedimageuri);
                 imgVUserProfile.setImageURI(selectedimageuri);
                 imgValue=imgVUserProfile.getDrawable();
             }
@@ -191,18 +184,22 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             case R.id.llSetting:
                 displaySetting();
                 break;
-            case R.id.llSignin:
+          /*  case R.id.llSignin:
                 DisplaySignIn();
-                break;
+                break;*/
             case R.id.llSupport:
                 DisplaySupport();
                 break;
-            case R.id.llMessage:
+            /*case R.id.llMessage:
                 displayMessage();
-                break;
+                break;*/
             case R.id.llProfile:
                 imgValue=imgVUserProfile.getDrawable();
                 displayProfile(imgValue);
+                break;
+            case R.id.rlBodyPlayNow:
+                Intent i  = new Intent(MainActivity.this,TableActivity.class);
+                startActivity(i);
                 break;
         }
 
@@ -409,8 +406,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         tvProfile.setVisibility(GONE);
         tvPlayerOnline.setVisibility(GONE);
         llProfile.setVisibility(GONE);
-        linearLayout3.setVisibility(GONE);
-        tvFriendsPlayer.setVisibility(GONE);
+      //  linearLayout3.setVisibility(GONE);
+     //   tvFriendsPlayer.setVisibility(GONE);
         rlBodyPlayNow.setVisibility(GONE);
         rlBodyLobby.setVisibility(GONE);
         horizontalScrollView.setVisibility(GONE);
@@ -431,8 +428,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 tvProfile.setVisibility(View.VISIBLE);
                 tvPlayerOnline.setVisibility(View.VISIBLE);
                 llProfile.setVisibility(View.VISIBLE);
-                linearLayout3.setVisibility(View.VISIBLE);
-                tvFriendsPlayer.setVisibility(View.VISIBLE);
+               // linearLayout3.setVisibility(View.VISIBLE);
+              //  tvFriendsPlayer.setVisibility(View.VISIBLE);
                 rlBodyPlayNow.setVisibility(View.VISIBLE);
                 rlBodyLobby.setVisibility(View.VISIBLE);
                 horizontalScrollView.setVisibility(View.VISIBLE);
@@ -440,7 +437,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         });
     }
 
-    private void displayMessage() {
+   /* private void displayMessage() {
         final Dialog myAlertdisplayMessageDialog = new Dialog(this,R.style.MyDialog_FullScreen);
         myAlertdisplayMessageDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         myAlertdisplayMessageDialog.setContentView(R.layout.message_layout);
@@ -571,8 +568,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         tvProfile.setVisibility(GONE);
         tvPlayerOnline.setVisibility(GONE);
         llProfile.setVisibility(GONE);
-        linearLayout3.setVisibility(GONE);
-        tvFriendsPlayer.setVisibility(GONE);
+       // linearLayout3.setVisibility(GONE);
+       // tvFriendsPlayer.setVisibility(GONE);
         rlBodyPlayNow.setVisibility(GONE);
         rlBodyLobby.setVisibility(GONE);
         horizontalScrollView.setVisibility(GONE);
@@ -726,15 +723,15 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 tvProfile.setVisibility(View.VISIBLE);
                 tvPlayerOnline.setVisibility(View.VISIBLE);
                 llProfile.setVisibility(View.VISIBLE);
-                linearLayout3.setVisibility(View.VISIBLE);
-                tvFriendsPlayer.setVisibility(View.VISIBLE);
+              //  linearLayout3.setVisibility(View.VISIBLE);
+               // tvFriendsPlayer.setVisibility(View.VISIBLE);
                 rlBodyPlayNow.setVisibility(View.VISIBLE);
                 rlBodyLobby.setVisibility(View.VISIBLE);
                 horizontalScrollView.setVisibility(View.VISIBLE);
             }
         });
 
-    }
+    }*/
 
     private void DisplaySupport() {
 
@@ -743,11 +740,11 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         myAlertDisplaySupportDialog.setContentView(R.layout.support_layout);
         myAlertDisplaySupportDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
-       final TextView tvSupport = myAlertDisplaySupportDialog.findViewById(R.id.tvSupport);
+     //  final TextView tvSupport = myAlertDisplaySupportDialog.findViewById(R.id.tvSupport);
         final TextView tvRules = myAlertDisplaySupportDialog.findViewById(R.id.tvRules);
         final LinearLayout rlBodySupport = myAlertDisplaySupportDialog.findViewById(R.id.rlBodySupport);
         final RelativeLayout rlBodyRules = myAlertDisplaySupportDialog.findViewById(R.id.rlBodyRules);
-        final LinearLayout llAccountRelatedQuestion = myAlertDisplaySupportDialog.findViewById(R.id.llAccountRelatedQuestion);
+       /* final LinearLayout llAccountRelatedQuestion = myAlertDisplaySupportDialog.findViewById(R.id.llAccountRelatedQuestion);
         final LinearLayout  llAccountRelatedQuestionLayout = myAlertDisplaySupportDialog.findViewById(R.id.llAccountRelatedQuestionLayout);
         final LinearLayout llSupportMainFirstLayout  = myAlertDisplaySupportDialog.findViewById(R.id.llSupportMainFirstLayout);
         final LinearLayout llFinancialQuestion = myAlertDisplaySupportDialog.findViewById(R.id.llFinancialQuestion);
@@ -759,7 +756,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         final LinearLayout llGamesQuestion = myAlertDisplaySupportDialog.findViewById(R.id.llGamesQuestion);
         final LinearLayout  llGamesQuestionLayout = myAlertDisplaySupportDialog.findViewById(R.id.llGamesQuestionLayout);
         final LinearLayout llFriendsQuestion = myAlertDisplaySupportDialog.findViewById(R.id.llFriendsQuestion);
-        final LinearLayout  llFriendsLayout = myAlertDisplaySupportDialog.findViewById(R.id.llFriendsLayout);
+        final LinearLayout  llFriendsLayout = myAlertDisplaySupportDialog.findViewById(R.id.llFriendsLayout);*/
 
 
 
@@ -772,24 +769,24 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         tvProfile.setVisibility(GONE);
         tvPlayerOnline.setVisibility(GONE);
         llProfile.setVisibility(GONE);
-        linearLayout3.setVisibility(GONE);
-        tvFriendsPlayer.setVisibility(GONE);
+      //  linearLayout3.setVisibility(GONE);
+       // tvFriendsPlayer.setVisibility(GONE);
         rlBodyPlayNow.setVisibility(GONE);
         rlBodyLobby.setVisibility(GONE);
         horizontalScrollView.setVisibility(GONE);
         tvDialogHeader.setText("Support");
 
 
-        llAccountRelatedQuestionLayout.setVisibility(GONE);
+      /*  llAccountRelatedQuestionLayout.setVisibility(GONE);
         llSupportMainFirstLayout.setVisibility(View.VISIBLE);
         llFinancialQuestionLayout.setVisibility(GONE);
         llRulesQuestionLayout.setVisibility(GONE);
         llTechnicalQuestionLayout.setVisibility(GONE);
         llGamesQuestionLayout.setVisibility(GONE);
-        llFriendsLayout.setVisibility(GONE);
+        llFriendsLayout.setVisibility(GONE);*/
 
 
-
+/*
         llAccountRelatedQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -884,7 +881,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 tvRules.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
                 support = true;
             }
-        });
+        });*/
 
 
 
@@ -911,7 +908,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 rlBodyRules.setVisibility(View.VISIBLE);
                 tvRules.setBackgroundResource(R.drawable.bg_dialog_header);
                // tvFAQ.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
-                tvSupport.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
+              //  tvSupport.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
                 support = true;
             }
         });
@@ -931,8 +928,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 tvProfile.setVisibility(View.VISIBLE);
                 tvPlayerOnline.setVisibility(View.VISIBLE);
                 llProfile.setVisibility(View.VISIBLE);
-                linearLayout3.setVisibility(View.VISIBLE);
-                tvFriendsPlayer.setVisibility(View.VISIBLE);
+              //  linearLayout3.setVisibility(View.VISIBLE);
+             //   tvFriendsPlayer.setVisibility(View.VISIBLE);
                 rlBodyPlayNow.setVisibility(View.VISIBLE);
                 rlBodyLobby.setVisibility(View.VISIBLE);
                 horizontalScrollView.setVisibility(View.VISIBLE);
@@ -940,7 +937,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         });
     }
 
-    private void DisplaySignIn() {
+   /* private void DisplaySignIn() {
 
         final Dialog myAlertDialog = new Dialog(this,R.style.MyDialog_FullScreen);
         myAlertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -957,7 +954,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 myAlertDialog.dismiss();
             }
         });
-    }
+    }*/
 
     private void displaySetting() {
 
@@ -967,11 +964,14 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         myAlertdisplaySettingDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         tvGeneral = myAlertdisplaySettingDialog.findViewById(R.id.tvGeneral);
-        tvNotification = myAlertdisplaySettingDialog.findViewById(R.id.tvNotification);
+       // tvNotification = myAlertdisplaySettingDialog.findViewById(R.id.tvNotification);
         cancel = myAlertdisplaySettingDialog.findViewById(R.id.cancel);
 
         llGeneral = myAlertdisplaySettingDialog.findViewById(R.id.llGeneral);
-        llNotification = myAlertdisplaySettingDialog.findViewById(R.id.llNotification);
+       // llNotification = myAlertdisplaySettingDialog.findViewById(R.id.llNotification);
+
+
+
 
 
         //visibility gone from main page
@@ -981,23 +981,23 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         tvProfile.setVisibility(GONE);
         tvPlayerOnline.setVisibility(GONE);
         llProfile.setVisibility(GONE);
-        linearLayout3.setVisibility(GONE);
-        tvFriendsPlayer.setVisibility(GONE);
+      //  linearLayout3.setVisibility(GONE);
+//        tvFriendsPlayer.setVisibility(GONE);
         rlBodyPlayNow.setVisibility(GONE);
         rlBodyLobby.setVisibility(GONE);
         horizontalScrollView.setVisibility(GONE);
 
-        tvGeneral.setOnClickListener(new View.OnClickListener() {
+   /*     tvGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                llNotification.setVisibility(GONE);
+               // llNotification.setVisibility(GONE);
                 llGeneral.setVisibility(View.VISIBLE);
                 tvGeneral.setBackgroundResource(R.drawable.bg_dialog_header);
-                tvNotification.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
+              //  tvNotification.setBackgroundResource(R.drawable.bg_dialog_header_unselected);
                     setting=true;
             }
-        });
-        tvNotification.setOnClickListener(new View.OnClickListener() {
+        });*/
+  /*      tvNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -1008,7 +1008,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                          llGeneral.setVisibility(GONE);
                         setting=true;
             }
-        });
+        });*/
 
 
         myAlertdisplaySettingDialog.show();
@@ -1023,8 +1023,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 tvProfile.setVisibility(View.VISIBLE);
                 tvPlayerOnline.setVisibility(View.VISIBLE);
                 llProfile.setVisibility(View.VISIBLE);
-                linearLayout3.setVisibility(View.VISIBLE);
-                tvFriendsPlayer.setVisibility(View.VISIBLE);
+               // linearLayout3.setVisibility(View.VISIBLE);
+              //  tvFriendsPlayer.setVisibility(View.VISIBLE);
                 rlBodyPlayNow.setVisibility(View.VISIBLE);
                 rlBodyLobby.setVisibility(View.VISIBLE);
                 horizontalScrollView.setVisibility(View.VISIBLE);
@@ -1034,19 +1034,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     }
 
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-
-    }
     }
 

@@ -21,15 +21,14 @@
             android:paddingTop="10dp"
             android:paddingLeft="10dp">
 
-            <LinearLayout
+           <!-- <LinearLayout
                 android:id="@+id/linearLayout1"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#9e010b48"
-                >
+                android:orientation="horizontal">
 
-                <LinearLayout
+                &lt;!&ndash;      <LinearLayout
                     android:id="@+id/llStore"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -51,62 +50,64 @@
                         android:textColor="#ffffff"
                         android:textSize="10dp"/>
 
-                </LinearLayout>
+                </LinearLayout>&ndash;&gt;
 
-                <LinearLayout
+              &lt;!&ndash;  <LinearLayout
                     android:id="@+id/llFriends"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imgVFriends"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/users"/>
+                        android:src="@drawable/users" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Friends"
                         android:textColor="#ffffff"
-                        android:textSize="10dp"/>
+                        android:textSize="10dp" />
 
-                </LinearLayout>
+                </LinearLayout>&ndash;&gt;
 
-                <LinearLayout
+       &lt;!&ndash;         <LinearLayout
                     android:id="@+id/llMessage"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imgVMessage"
-                        android:layout_width="24dp"
+                        android:layout_width="match_parent"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/envelope"/>
+                        android:src="@drawable/envelope" />
+
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Message"
+                        android:gravity="center"
                         android:textColor="#ffffff"
-                        android:textSize="10dp"/>
+                        android:textSize="10dp" />
 
-                </LinearLayout>
+                </LinearLayout>&ndash;&gt;
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <TextView
                 android:id="@+id/tvProfile"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Profile"
                 android:textSize="15dp"
@@ -133,11 +134,11 @@
                     android:orientation="vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="2dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Guest"
                         android:textColor="#ffffff"
@@ -145,14 +146,14 @@
                         android:textSize="15dp"
                         />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="$7.9K"
                         android:textColor="#ffffff"
                         android:textSize="15dp"
                         />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10 coins"
                         android:textColor="#ffffff"
@@ -166,16 +167,16 @@
 
             </LinearLayout>
 
-            <TextView
+           <!-- <TextView
                 android:id="@+id/tvFriendsPlayer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Friends &amp; Players"
                 android:textSize="15dp"
                 android:textColor="#ffffff"
-                android:layout_below="@+id/linearLayout1"/>
+                android:layout_below="@+id/linearLayout1"/>-->
 
-            <LinearLayout
+       <!--     <LinearLayout
                 android:id="@+id/linearLayout3"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -250,7 +251,7 @@
                 </LinearLayout>
 
 
-            </LinearLayout>
+            </LinearLayout>-->
 
 
 
@@ -460,7 +461,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout5"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#9e010b48"
                 android:layout_alignParentRight="true">
@@ -468,9 +469,10 @@
                 <LinearLayout
                     android:id="@+id/llSupport"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+
                     android:layout_marginTop="5dp"
                    >
 
@@ -484,6 +486,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Support"
+                        android:layout_gravity="center"
                         android:textColor="#ffffff"
                         android:textSize="10dp"/>
 
@@ -492,9 +495,9 @@
                 <LinearLayout
                     android:id="@+id/llSetting"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
                     android:layout_marginTop="5dp"
                     android:layout_height="wrap_content">
 
@@ -508,12 +511,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Settings"
+                        android:layout_gravity="center"
                         android:textColor="#ffffff"
                         android:textSize="10dp"/>
 
                 </LinearLayout>
 
-                <LinearLayout
+           <!--     <LinearLayout
                     android:id="@+id/llSignin"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -536,7 +540,7 @@
                         android:textColor="#ffffff"
                         android:textSize="10dp"/>
 
-                </LinearLayout>
+                </LinearLayout>-->
 
             </LinearLayout>
 
@@ -557,10 +561,9 @@
 
 
             <RelativeLayout
-
+                android:id="@+id/rlBodyPlayNow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rlBodyPlayNow"
                 android:background="@drawable/bg_play_now">
 
                 <ImageView
@@ -613,7 +616,7 @@
             </RelativeLayout>
 
 
-            <HorizontalScrollView
+          <!--  <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -816,7 +819,7 @@
 
 
                 </LinearLayout>
-            </HorizontalScrollView>
+            </HorizontalScrollView>-->
 
 
         </LinearLayout>

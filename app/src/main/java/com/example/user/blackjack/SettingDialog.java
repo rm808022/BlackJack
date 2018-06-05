@@ -25,9 +25,10 @@ public class SettingDialog extends AppCompatActivity implements View.OnClickList
 
                 break;
 
-            case R.id.tvNotification:
+/* case R.id.tvNotification:
 
-                break;
+                break;*/
+
 
         }
 
